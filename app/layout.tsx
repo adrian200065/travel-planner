@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -8,7 +9,7 @@ import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Waypointr - Craft Your Next Adventure',
+  title: 'AI Travel Planner - Craft Your Next Adventure',
   description: 'Tell us your travel dreams, and our AI will build a personalized, day-by-day itinerary just for you. Start planning your perfect trip today.',
   icons: {
     icon: '/favicon.ico',
