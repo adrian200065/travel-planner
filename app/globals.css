@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components; 
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Updated Design System Colors with better contrast */
+    --background: 255 255 255; /* #FFFFFF - Pure white */
+    --foreground: 3 3 3; /* #030303 - Black */
+    --card: 255 255 255; /* #FFFFFF - Pure white */
+    --card-foreground: 3 3 3; /* #030303 - Black */
+    --popover: 255 255 255;
+    --popover-foreground: 3 3 3;
+    --primary: 29 191 115; /* #1DBF73 - Primary green */
+    --primary-foreground: 255 255 255; /* White text on green */
+    --secondary: 246 23 23; /* #F61717 - Secondary red */
+    --secondary-foreground: 255 255 255; /* White text on red */
+    --muted: 248 250 252; /* #F8FAFB - Very light gray */
+    --muted-foreground: 71 85 105; /* #475569 - Dark gray for secondary text */
+    --accent: 29 191 115; /* #1DBF73 - Primary green */
+    --accent-foreground: 255 255 255;
+    --destructive: 246 23 23; /* #F61717 - Secondary red */
+    --destructive-foreground: 255 255 255;
+    --warning: 255 222 0; /* #FFDE00 - Warning yellow */
+    --warning-foreground: 3 3 3; /* Black text on yellow */
+    --border: 226 232 240; /* #E2E8F0 - Light gray border */
+    --input: 226 232 240;
+    --ring: 29 191 115; /* #1DBF73 - Primary green */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 3 3 3; /* #030303 - Black */
+    --foreground: 255 255 255;
+    --card: 15 23 42;
+    --card-foreground: 248 250 252;
+    --popover: 15 23 42;
+    --popover-foreground: 248 250 252;
+    --primary: 29 191 115; /* #1DBF73 - Primary green */
+    --primary-foreground: 255 255 255;
+    --secondary: 246 23 23; /* #F61717 - Secondary red */
+    --secondary-foreground: 255 255 255;
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
+    --accent: 29 191 115;
+    --accent-foreground: 255 255 255;
+    --destructive: 246 23 23;
+    --destructive-foreground: 255 255 255;
+    --warning: 255 222 0;
+    --warning-foreground: 3 3 3;
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 29 191 115;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom animations for travel theme */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: countUp 2s ease-out forwards;
+}
+
+/* Travel-themed gradients with new colors */
+.bg-travel-gradient {
+  background: linear-gradient(135deg, #1DBF73 0%, #0F9D58 50%, #0A7A46 100%);
+}
+
+.bg-hero-gradient {
+  background: linear-gradient(135deg, rgba(29, 191, 115, 0.9) 0%, rgba(15, 157, 88, 0.9) 100%);
+}
+
+/* Warning gradient */
+.bg-warning-gradient {
+  background: linear-gradient(135deg, #FFDE00 0%, #FFD700 100%);
+}
+
+/* Parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}

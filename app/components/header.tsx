@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useState } from 'react'
@@ -39,7 +38,7 @@ export function Header() {
               <MapPin className="h-5 w-5 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              AI Travel Planner
+              Waypointr
             </span>
           </Link>
 

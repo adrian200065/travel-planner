@@ -1,4 +1,3 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -39,7 +38,7 @@ export function HeroSection() {
             className="flex items-center justify-center mb-6"
           >
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-              <Sparkles className="h-4 w-4 text-yellow-400" />
+              <Sparkles className="h-4 w-4 text-warning" />
               <span className="text-sm font-medium">AI-Powered Planning</span>
             </div>
           </motion.div>
@@ -47,7 +46,7 @@ export function HeroSection() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Craft your next adventure,{' '}
             <motion.span
-              className="text-yellow-400"
+              className="text-warning"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -111,10 +110,10 @@ export function HeroSection() {
         <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/20" />
       </div>
       <div className="absolute bottom-32 right-12 animate-float" style={{ animationDelay: '2s' }}>
-        <div className="w-12 h-12 rounded-full bg-yellow-400/20 backdrop-blur-sm border border-yellow-400/30" />
+        <div className="w-12 h-12 rounded-full bg-warning/20 backdrop-blur-sm border border-warning/30" />
       </div>
       <div className="absolute top-1/3 right-20 animate-float" style={{ animationDelay: '4s' }}>
-        <div className="w-8 h-8 rounded-full bg-blue-400/20 backdrop-blur-sm border border-blue-400/30" />
+        <div className="w-8 h-8 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30" />
       </div>
     </section>
   )
